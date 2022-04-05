@@ -52,3 +52,46 @@ class Myapp(unittest.TestCase):
     print("Exception Handling done")'''
 if __name__=="__main__":
     unittest.main()
+
+
+
+
+
+'''
+
+    import unittest
+def add(x,y):
+    return x+y
+
+def check(x):
+    if x%2==0:
+        return "even"
+    else:
+        return "odd"
+class Myapp1(unittest.TestCase):
+    def test_case3(self):
+        a=10
+        b=22
+        c=add(a,b)
+        self.assertEqual(a+b,c)
+    def test_case4(self):
+        a=12.5
+        b=13.4
+        c=add(a,b)
+        self.assertEqual(c,a+b)
+
+class EvenOrAdd(unittest.TestCase):
+    def test_case_even_check(self):
+        x=10
+        result=check(x)
+
+        self.assertEqual("even",result)
+    def test_case_odd_check(self):
+        x=9
+        result=check(x)
+        self.assertEqual("odd",result)
+
+if __name__=="__main__":
+    unittest.main()
+
+'''
